@@ -42,14 +42,15 @@ public class Snap extends CardGame {
             Timer timer = new Timer();
             TimerTask snap = new TimerTask() {
                 public void run() {
-                    if (scanner.nextLine().equals("snap")) {
-                        System.out.println("you win!");
-                    } else {
-                        System.out.println("you lose!");
-                    }
+                    System.exit(0);
                 }
             };
             timer.schedule( snap, 2*1000 );
+            if (scanner.nextLine().equals("snap")) {
+                System.out.println("you win!");
+            } else {
+                System.out.println("you lose!");
+            }
             timer.cancel();
         } else {
             System.out.println("player 2 wins!");
