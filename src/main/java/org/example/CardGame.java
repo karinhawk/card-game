@@ -3,14 +3,11 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Random;
 
 public class CardGame {
 
     ArrayList <Card> deckOfCards = new ArrayList<>();
     String[] allSymbols = {"2" ,"3" ,"4" ,"5" ,"6" ,"7" ,"8" ,"9" ,"10" ,"J" ,"Q" , "K", "A"};
-
-    private String name;
 
     public void populateDeck(){
         for (String symbol : allSymbols){
@@ -48,14 +45,7 @@ public class CardGame {
     }
 
     public ArrayList<Card> shuffleDeck(){
-        Random random = new Random();
-        for (int i = deckOfCards.size() - 1; i >= 1; i--)
-        {
-            int j = random.nextInt(i + 1);
-            Card obj = deckOfCards.get(i);
-            deckOfCards.set(i, deckOfCards.get(j));
-            deckOfCards.set(j, obj);
-        }
+        Collections.shuffle(deckOfCards);
         return deckOfCards;
     }
 }

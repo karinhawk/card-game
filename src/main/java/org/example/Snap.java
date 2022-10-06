@@ -38,7 +38,7 @@ public class Snap extends CardGame {
             }
         } while (!Objects.equals(dealtCard.getSymbol(), oldCard.getSymbol()));
         if (activePlayer == player2){
-            System.out.println("type snap to win");
+            System.out.println("type snap and hit enter to win");
             Timer timer = new Timer();
             TimerTask snap = new TimerTask() {
                 public void run() {

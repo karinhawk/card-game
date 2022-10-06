@@ -16,8 +16,7 @@ public class Player {
         this.player = player;
     }
 
-    public Player announcePlayer(){
+    public void announcePlayer(){
         System.out.println("It's player " + player + " 's turn!");
-        return null;
     }
 }
